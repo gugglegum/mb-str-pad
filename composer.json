@@ -1,0 +1,22 @@
+{
+  "name": "gugglegum/mb-str-pad",
+  "description": "mb_str_pad() - multibyte implementation of str_pad() function",
+  "type": "library",
+  "keywords": ["mb_str_pad", "str_pad", "mbstring", "php", "multibyte", "multi-byte", "string", "function"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Paul Melekhov",
+      "email": "gugglegum@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "gugglegum\\mb_str_pad\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.0",
+    "ext-mbstring": "*"
+  }
+}

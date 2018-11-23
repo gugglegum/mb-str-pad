@@ -19,21 +19,16 @@ class MBString
         $input_length = mb_strlen($input);
         switch ($pad_type) {
             case STR_PAD_RIGHT :
-                $padding1 = '';
-                $padding2 = self::mb_fill_string($pad_string, $pad_length - $input_length);
-                break;
+                return $input . self::mb_fill_string($pad_string, $pad_length - $input_length);
             case STR_PAD_LEFT :
-                $padding1 = self::mb_fill_string($pad_string, $pad_length - $input_length);
-                $padding2 = '';
-                break;
+                return self::mb_fill_string($pad_string, $pad_length - $input_length) . $input;
             case STR_PAD_BOTH :
-                $padding1 = self::mb_fill_string($pad_string, (int) floor(($pad_length - $input_length) / 2), $encoding);
-                $padding2 = self::mb_fill_string($pad_string, (int) ceil(($pad_length - $input_length) / 2), $encoding);
-                break;
+                return self::mb_fill_string($pad_string, (int) floor(($pad_length - $input_length) / 2), $encoding)
+                    . $input
+                    . self::mb_fill_string($pad_string, (int) ceil(($pad_length - $input_length) / 2), $encoding);
             default :
                 throw new \InvalidArgumentException("mb_str_pad(): Padding type has to be STR_PAD_LEFT, STR_PAD_RIGHT or STR_PAD_BOTH");
         }
-        return $padding1 . $input . $padding2;
     }
 
     /**

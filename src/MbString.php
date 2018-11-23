@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace gugglegum\mb_str_pad;
 
 class MbString

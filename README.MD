@@ -17,7 +17,7 @@ Quite simple: `composer require gugglegum/mb-str-pad`
 
 require_once 'vendor/autoload.php';
 
-use gugglegum\mb_str_pad\MBString;
+use gugglegum\mb_str_pad\MbString;
 
 $input = 'Привет'; 
 $pad_length = 20; 

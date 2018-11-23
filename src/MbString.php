@@ -2,7 +2,7 @@
 
 namespace gugglegum\mb_str_pad;
 
-class MBString
+class MbString
 {
     /**
      * Multi-byte version of str_pad()

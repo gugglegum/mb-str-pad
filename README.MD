@@ -2,9 +2,7 @@
 
 This is true multibyte implementation of PHP's built-in string function `str_pad()` which support UTF-8 both in `$input` and in `$pad_string`.
 
-PHP doesn't support autoloading of functions on demand, so you would have to load it explicitly by using `require_once('path/to/function.php')` which is not convenient. Composer's autoload allow only to load it on startup no matter will it be used or not.
-
-This is why I wrote it as static method wrapped into the class. This is the only way in PHP to autoload this function only when it's really used.
+This function is implemented as a static method of `MbString` class (not as a standalone function) because PHP doesn't doesn't support autoloading of functions on demand. You will not want to include it prior every usage.
 
 ## Installation
 
